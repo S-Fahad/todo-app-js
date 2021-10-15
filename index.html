@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/000/411/286/original/vector-people-making-a-to-do-list-illustration.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div><b>Tasks </b>List</div>
+        <div>
+          <i class="fas fa-plus-circle add" onclick="addList() , toggle()"></i
+          ><span>Add Item</span>
+        </div>
+      </div>
+      <div id="popUp">
+        <h3>Add New List</h3>
+        <label for="text"><input type="text" id="listName" value="" /></label>
+        <button id="addBtn" onclick="add()">Add</button>
+        <button onclick="cancel()">close</button>
+      </div>
+      <div id="popUp2">
+        <h3>Add items to List</h3>
+        <label for="text"><input type="text" id="itemName" value="" /></label>
+        <button class="sub" onclick="addItem(this.id)">Add</button>
+        <button onclick="cancel2()">close</button>
+      </div>
+      <div class="alertMssge"></div>
+      <div id="main" class="blur">
+        <div id="listContent">No Items in the todo list</div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

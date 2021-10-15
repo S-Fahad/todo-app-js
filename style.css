@@ -1,0 +1,119 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 40px 80px;
+}
+.head b {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.head div {
+  font-size: 30px;
+  font-family: "Indie Flower", cursive;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.add {
+  color: rgb(148, 148, 241);
+  cursor: pointer;
+}
+.add:hover {
+  transform: scale(1.1);
+}
+
+/* main--- adding list */
+#listContent {
+  margin-top: 15px;
+  font-size: 35px;
+}
+#popUp,
+#popUp2 {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  box-sizing: border-box;
+  height: 150px;
+  width: 260px;
+  left: 35%;
+  margin: auto;
+  margin-top: 15vh;
+  text-align: center;
+  background-color: white;
+  color: rgb(224, 93, 115);
+  border: 1px solid red;
+  border-radius: 12px;
+}
+#popUp button,
+#popUp2 button {
+  background-color: rgb(224, 93, 115);
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  margin: 15px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+#popUp input[type="text"],
+#popUp2 input[type="text"] {
+  padding: 5px;
+  border: 1px solid rgb(224, 93, 115);
+  border-radius: 5px;
+}
+#main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+.listEffect {
+  position: relative;
+  background-color: white;
+  color: rgb(224, 93, 115);
+  margin: 15px;
+  min-height: 200px;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 10px;
+}
+#foot {
+  /* display: none; */
+  position: absolute;
+  bottom: 5px;
+  right: 7px;
+}
+.active {
+  filter: blur(30px);
+}
+.listStyle {
+  text-align: center;
+  padding: 5px;
+  list-style-type: none;
+}
+/*media queries :for responsive design */
+@media screen and (min-width: 240px) and (max-width: 560px) {
+  body {
+    margin: 20px;
+  }
+  span {
+    display: none;
+  }
+  #listContent {
+    font-size: 20px;
+  }
+  #popUp {
+    width: 220px;
+  }
+  #main {
+    flex-direction: column;
+  }
+  .listEffect {
+    margin: auto;
+    margin-top: 10px;
+    min-height: 100px;
+    min-width: 150px;
+  }
+}
